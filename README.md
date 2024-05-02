@@ -1,5 +1,5 @@
-<div style="text-align: center;">
-    <img src="./img/Reactjs.png" alt="Símbolo React" style="width: 150px; height: 150px; display: inline-block;" />
+<div style="display: flex; justify-content: center;">
+    <img src="./img/Reactjs.png" alt="Símbolo React" style="width: 150px; height: 150px;" />
 </div>
 
 <h2 style="text-align:center; color: yellow">Extensões Navegador</h2>
