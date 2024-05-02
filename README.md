@@ -1,4 +1,6 @@
-## <img src="./img/Reactjs.png" alt="Símbolo React" style="width: 150px; height: 150px; margin: 0 auto; display: flex;" />
+<center>
+<img src="./img/Reactjs.png" alt="Símbolo React" style="width: 150px; height: 150px; margin: 0 auto; display: flex;" />
+</center>
 
 <h2 style="text-align:center; color: yellow">Extensões Navegador</h2>
 
