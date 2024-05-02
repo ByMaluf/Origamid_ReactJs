@@ -1,13 +1,10 @@
-<!-- Imagem React com estilo inline -->
-<img src="./img/Reactjs.png" alt="Símbolo React" style="width: 150px; height: 150px; margin: 0 auto; display: flex;" />
+## <img src="./img/Reactjs.png" alt="Símbolo React" style="width: 150px; height: 150px; margin: 0 auto; display: flex;" />
 
-# Extensões Utilizadas
+<h2 style="text-align:center; color: yellow">Extensões Navegador</h2>
 
-## Plugin do Chrome:
+![React Developer Tools](./img/image.png)
 
-![Plugin do Chrome](./img/image.png)
-
-## Extensões do Visual Studio Code:
+<h2 style="text-align:center; color: yellow">Extensões Visual Studio Code</h2>
 
 ![Extensão 1](./img/image-1.png)
 ![Extensão 2](./img/image-2.png)
@@ -66,4 +63,79 @@
 
 ## Anotações
 
+<h3 style="color: #00BDEC">JSX</h3>
+
 - Arquivos `JSX`: Eles não podem ser lidos pelo navegador. Você precisa de um transpilador para converter JSX para JavaScript.
+
+<h3 style="color: #00BDEC">React Element</h3>
+
+- Todo elemento React é criado com a função createElement. O Babel é o responsável por transformar o elemento criado com JSX (que se parece com HTML) em funções de React.
+
+```javaScript
+function App() {
+  return <div id="container">Meu App</div>;
+}
+// É transformado em:
+function App() {
+  return React.createElement('div', { id: 'container' }, 'Meu App');
+}
+```
+
+<img src="./img/image-5.png" alt="Transformação React" style="border: 1px dashed white"/>
+
+<h3 style="color: #00BDEC">Componentes</h3>
+
+- Permitem você dividir a sua interface em pequenos elementos. São criados através de funções que retornam elementos React.
+
+```javascript
+// Function Component
+const Button = () => {
+  return <button>Comprar</button>;
+};
+```
+
+- O principal motivo de criarmos componentes é para podermos compor a interface com diversos componentes que podem ser reutilizados.
+
+```javascript
+const Button = () => {
+  return <button>Comprar</button>;
+};
+
+const MainNav = () => {
+  return (
+    <nav>
+      <a href="#">Link 1</a>
+      <Button />
+    </nav>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <MainNav />
+      <Button />
+    </div>
+  );
+};
+```
+
+- Utilizamos as {} para executar expressões de JavaScript e mostrar o resultado no DOM.
+
+```javascript
+const Produtos = () => {
+  const produto1 = "Camisa";
+  const produto2 = "Bermuda";
+
+  return (
+    <div>
+      <button>
+        Comprar {produto1} - R$ {Math.random()}
+      </button>
+      <button>
+        Bermuda {produto2} - R$ {Math.random()}
+      </button>
+    </div>
+  );
+};
+```
