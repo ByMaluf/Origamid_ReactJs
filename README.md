@@ -141,3 +141,49 @@ const Produtos = () => {
   );
 };
 ```
+
+## Bundler
+
+- Agrupa (bundle) o código do seu aplicativo
+
+- Permite definirmos os componentes em diferentes arquivos para melhor organização
+
+- Facilita a importação de código externo instalado via NPM
+
+- `ESBuild (Recomendado)`, Rollup, Parcel, Turbopack, `Webpack() => Mais antigo e o mais lento. `
+
+## Transpiler
+
+- Transforma JSX return <div></div> em funções de React React.createElement()
+
+- Transforma JavaScript novo const em JavaScript antigo var
+
+- Babel, SWC, ESBuild
+
+# Criação de um aplicativo React
+
+### Vite
+
+- Cria um ambiente de desenvolvimento já configurado e otimizado para a criação de aplicativos com React.
+
+- Na pasta que deseja instalar:
+
+  ```javascript
+   npm create vite@latest .
+   npm install
+  ```
+
+#### Comandos
+
+- Inicia o desenvolvimento:
+  `npm run dev`
+- Cria a build final
+  `npm run build`
+
+<a href='https://vitejs.dev/'> Vite</a>
+
+### Create React App
+
+- É o mesmo princípio do Vite, mas é mais lento (usa webpack) e está gradativamente em desuso.
+
+<a href='https://create-react-app.dev/'> Create React App</a>
