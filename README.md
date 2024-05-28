@@ -169,7 +169,7 @@ const Produtos = () => {
 - Na pasta que deseja instalar:
 
   ```javascript
-   npm create vite@latest .
+   npm create vite@latest . (O ponto serve para indicar ao instalador para instalar os arquivos no atual diretório, se omitida ele vai pedir um nome para o diretório que vai criar com os arquivos.j)
    npm install
   ```
 
@@ -187,3 +187,94 @@ const Produtos = () => {
 - É o mesmo princípio do Vite, mas é mais lento (usa webpack) e está gradativamente em desuso.
 
 <a href='https://create-react-app.dev/'> Create React App</a>
+
+## Modo Estrito
+
+- Sem o modo estrito
+
+```javascript
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+```
+
+- Com o modo estrito
+
+```javascript
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+## JSX
+
+- JavaScript XML / Extension. Estende a sintaxe do JavaScript, introduzindo elementos como XML que são convertidos em funções de React.
+
+```javascript
+const App = () => {
+  return <button>Comprar</button>;
+};
+```
+
+- É transformado em
+
+```javascript
+const App = () => {
+  return React.createElement("button", null, "Comprar");
+};
+```
+
+## Atributos - Casos Especiais
+
+- O caso especial mais comum é o atributo class. Pelo fato de class ser uma palavra reservada do JavaScript, o JSX resolveu mudar o nome para evitar conflitos. O correto é className. Além dele existe o htmlFor.
+
+```javascript
+const App = () => {
+  return <div className="grid">Origamid</div>;
+};
+
+const App = () => {
+  return (
+    <form>
+      <label htmlFor="nome">Nome</label>
+      <input type="text" id="nome" />
+    </form>
+  );
+};
+```
+
+## camelCase
+
+- Atributos com nomes compostos devem ser utilizados como camelCase. Exemplo: autoplay vira autoPlay.
+
+```javascript
+const App = () => {
+  return <video autoPlay />;
+};
+```
+
+## Expressões/Variáveis
+
+```javascript
+const App = () => {
+  const nome = "André";
+  return <p>{nome}</p>;
+};
+```
+
+```javascript
+const App = () => {
+  const ativo = true;
+  return <p className={ativo ? "ativo" : "inativo"}>Estoque</p>;
+};
+```
+
+- Também posso atribuir JSX direto a uma constante/variável
+
+```javascript
+const Titulo = <h1>Meu título</h1>;
+
+const App = () => {
+  return <div>{Titulo}</div>;
+};
+```
