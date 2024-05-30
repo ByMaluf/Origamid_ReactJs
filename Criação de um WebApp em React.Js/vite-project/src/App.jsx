@@ -37,7 +37,7 @@ const App = () => {
       <span style={{ color: dados.ativa ? 'green' : 'red' }}>{dados.ativa ? 'Ativa' : 'Inativa'}</span>
     </p>
     <p>Total gasto: R$ {totalGasto.toFixed(2)}</p>
-    {totalGasto > 10000 ? <p>Você está gastando muito.</p> : ''}
+    {totalGasto > 10000 && <p>Você está gastando muito.</p>}
   </div>;
 };
 
