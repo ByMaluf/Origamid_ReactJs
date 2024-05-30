@@ -17,13 +17,14 @@ const App = () => {
       <p>{'MINHA EMPRESA'.toLowerCase()}</p>
       <p>{30 * 2}</p>
       <p>{true}</p>
-      <p>{undefined}</p>
+      <p>{undefined}</p> {/* valores Undefined não são renderizados */}
       <p>{(() => 'Função Executada')()}</p>
       <p>{meuNome()}</p>
       <p>{quadrado(2)}</p>
       <p>{quadrado(2) === 4 ? 'Fórmula correta' : 'Fórmula incorreta'}</p>
       <p>{quadrado(2) === 4 && 'Fórmula correta'}</p>
       <p>{Date.now()}</p>
+      <p>{new Date().toISOString()}</p>
       <p>{new Date().getFullYear()}</p>
       <p>
         Marca: {carro.marca}, Rodas: {carro.rodas}

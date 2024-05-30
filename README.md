@@ -243,7 +243,7 @@ const App = () => {
 };
 ```
 
-## camelCase
+## CamelCase
 
 - Atributos com nomes compostos devem ser utilizados como camelCase. Exemplo: autoplay vira autoPlay.
 
@@ -276,5 +276,26 @@ const Titulo = <h1>Meu título</h1>;
 
 const App = () => {
   return <div>{Titulo}</div>;
+};
+```
+
+## Style (Estilo/Estilização)
+
+- O style irá receber um objeto com as propriedades do elemento em camelCase.
+
+```javascript
+const App = () => {
+  const estiloH1 = {
+    color: "blue",
+    fontSize: "20px",
+    fontFamily: "Helvetica",
+  };
+
+  return (
+    <div>
+      <h1 style={estiloH1}>Empresa</h1>
+      <p style={{ color: "green" }}>Sempre aberta</p>
+    </div>
+  );
 };
 ```
