@@ -299,3 +299,43 @@ const App = () => {
   );
 };
 ```
+
+## Informações JavaScript
+
+### A omissão de chaves nas arrow functions.
+
+- Se você usa chaves {} em uma arrow function, ela é tratada como uma função de várias linhas, e você precisa explicitamente usar a palavra-chave return se deseja retornar algum valor. Se você pretende usar uma arrow function de uma linha, você pode omitir as chaves e o return, e o valor será retornado automaticamente.
+
+### Exemplo - (As duas formas estão corretas)
+
+```javascript
+let totalGasto = dados.compras.map((item) => item.preco);
+```
+
+```javascript
+let totalGasto = dados.compras.map((item) => {
+  return item.preco;
+});
+```
+
+### Funções de CallBack
+
+- Uma função de callback em JavaScript é simplesmente uma função que é passada como um argumento para outra função. Isso permite que você especifique um comportamento personalizado que será executado quando uma determinada operação estiver concluída.
+
+- Por exemplo, em métodos de array como map, filter, forEach, entre outros, uma função de callback é passada como argumento para especificar o que fazer com cada elemento do array. Essa função de callback é então executada para cada elemento do array, permitindo que você realize operações personalizadas em cada um deles.
+
+- Um exemplo comum é o método map, que cria um novo array contendo os resultados de chamar uma função de callback em cada elemento do array original. Aqui está um exemplo de como você pode usar map com uma função de callback para dobrar cada número em um array:
+
+```javascript
+const numeros = [1, 2, 3, 4, 5];
+const dobrados = numeros.map((numero) => {
+  return numero * 2;
+});
+console.log(dobrados); // Saída: [2, 4, 6, 8, 10]
+```
+
+### Funções de Ordem Superior e de Primeira Classe
+
+- **_Funções de Ordem Superior_**: Em linguagens de programação, funções de ordem superior são aquelas que podem aceitar outras funções como argumentos e/ou retornar funções como resultados. Em JavaScript, isso é comum em funções como map, filter, reduce, forEach, entre outras, que recebem funções de callback como argumentos.
+
+- **_Cidadãos de Primeira Classe_**: Em linguagens de programação, cidadãos de primeira classe referem-se a recursos que podem ser tratados como valores comuns. Em JavaScript, funções são cidadãos de primeira classe, o que significa que elas podem ser atribuídas a variáveis, passadas como argumentos para outras funções e retornadas como valores de outras funções. Isso permite uma grande flexibilidade na manipulação e utilização de funções em JavaScript.

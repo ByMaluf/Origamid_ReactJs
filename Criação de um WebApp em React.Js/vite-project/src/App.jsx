@@ -26,20 +26,16 @@ const mario = {
 };
 
 const App = () => {
-  const dados = mario;
-  let totalGasto = 0;
+  const dados = luana;
+
+  let totalGasto = dados.compras.map((item) => +item.preco.replace('R$ ', '')).reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual, 0)
 
   return <div>
-
     <p>Nome: {dados.cliente}</p>
     <p>Idade: {dados.idade}</p>
     <p>Situação: <span style={dados.ativa ? { color: 'green' } : { color: 'red' }}>{dados.ativa ? 'Ativa' : 'Inativa'}</span>
     </p>
-    <p>Total gasto: {dados.compras.map((valor) => {
-      let precos = valor.preco
-      let precosFormatados = +precos.replace('R$ ', '')
-      totalGasto = totalGasto + precosFormatados
-    })} R$ {totalGasto.toFixed(2)}</p>
+    <p>Total gasto: R$ {totalGasto.toFixed(2)}</p>
     {totalGasto > 10000 ? <p>Você está gastando muito.</p> : ''}
   </div>;
 };
