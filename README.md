@@ -300,7 +300,51 @@ const App = () => {
 };
 ```
 
-## Informações JavaScript
+## JSX Arrays
+
+- O JSX irá listar cada um dos itens da array. Ele não irá separar ou colocar vírgula, é você que deve modificar a array para o resultado desejado.
+
+```javascript
+const App = () => {
+  const produtos = ["Notebook", "Smartphone", "Tablet"];
+
+  return <p>{produtos}</p>;
+};
+```
+
+### Keys
+
+- O JSX necessita de uma key única para cada elemento da Array.
+
+```javascript
+const App = () => {
+  const empresas = [<li key="e1">Apple</li>, <li key="e2">Google</li>];
+
+  return <ul>{empresas}</ul>;
+};
+```
+
+- A probabilidade de usarmos um array dessa forma é praticamente nula. O jeito mais indicado seria da forma a seguir.
+
+## Map
+
+- É comum usarmos o map direto na array como uma expressão, retornando um elemento para cada item novo da Array.
+
+```javascript
+const App = () => {
+  const filmes = ["Before Sunrise", "Before Sunset", "Before Midnight"];
+
+  return (
+    <ul>
+      {filmes.map((filme) => (
+        <li key={filme}>{filme}</li>
+      ))}
+    </ul>
+  );
+};
+```
+
+## INFORMAÇÕES JAVASCRIPT
 
 ### A omissão de chaves nas arrow functions.
 
