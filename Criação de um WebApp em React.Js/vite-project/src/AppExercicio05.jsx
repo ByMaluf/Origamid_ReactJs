@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './components/Button';
 import ProdutoHookUseEffect from './components/ProdutoHookUseEffect';
 
-const App = () => {
+const AppExercicio05 = () => {
 
   // Quando o usuário clicar em um dos botões, faça um fetch do produto clicado utilizando a api abaixo
   // https://ranekapi.origamid.dev/json/api/produto/notebook
@@ -49,4 +49,4 @@ const App = () => {
   </section>;
 };
 
-export default App;
+export default AppExercicio05;
